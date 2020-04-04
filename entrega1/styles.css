@@ -1,0 +1,42 @@
+#titulo{
+    text-align: center;
+    border-bottom: 1px dashed black;
+}
+p.paragrafo{
+    text-align: start;
+    padding: 10px;
+    color: black;
+}
+ul.segmentos{
+    list-style-type: circle;
+
+}
+h2.coordenador{
+    padding: 8px;
+    padding-left: 150px;
+}
+.retrato{ 
+    height:80px;
+    width:80px;	
+    padding-left: 100px;
+    float: left;
+}
+
+#contato{
+    padding: 6px;
+}
+
+p.tabela{
+    text-align: start;
+    padding: 6px;
+    padding-left: 40px;
+    color: black;
+    background-color: cadetblue;
+}
+p.tabela2{
+    text-align: start;
+    padding: 6px;
+    padding-left: 40px;
+    color: black;
+    background-color: gainsboro;
+}
