@@ -1,0 +1,74 @@
+    <nav class="navbar sticky-top navbar-expand-sm navbar-light" style="background-color: #004684;" >
+        <div class="container">
+            <a routerLink="https://maua.br/" class="navbar-brand"><img src="assets/logo.png" alt="Logo da maua"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#minhaNavBar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="minhaNavBar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a routerLink="/" routerLinkActive="active" class="nav-link text-light">Página principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/listaProfessor" routerLinkActive="active" class="nav-link text-light">Professores do Curso</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/sugestaoCurso" routerLinkActive="active" class="nav-link text-light">Sugestões para o Curso</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/paginaAluno" routerLinkActive="active" class="nav-link text-light" >Alunos</a>
+                    </li>
+                    <li class="nav-item dropdown ml-auto">
+                        <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown">MauaNet</a>
+                        <div class="dropdown-menu">
+                            <form action="" ngForm>
+                                <div class="col text-center">
+                                    <label for="nome">Email</label>
+                                    <input class="form-control" type="text" id="nome" placeholder="Digite seu email da Maua">
+                
+                                    <div class="form-group">
+                                        <label for="senha">Senha</label>
+                                        <input type="password" class="form-control" id="id" placeholder="Digite sua senha">
+                                    </div>
+                                    <button class="btn btn-primary">Entrar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <div class="container ">
+        
+        <router-outlet></router-outlet>
+      
+    </div>
+    
+
+    <!-- 
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="Computacao1.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="Computacao2.jpg" alt="Second slide">
+                </div>
+            </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+    </div>     
+    -->

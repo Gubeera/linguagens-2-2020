@@ -1,0 +1,45 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="pag_inicial.html">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Alunos</li>
+    </ol>
+</nav>
+<div class="container">
+    <form #meuForm="ngForm"(ngSubmit)="salvar(meuForm)">
+        <div class="form-group">
+            <label for="nome">Digite o Nome:</label>
+            <input type="text" class="form-control" name="nome" required ngModel #nomeInput (input)="validarInput(nomeInput,idadeInput,emailInput,troncoInput)">
+        </div>
+        <div class="form-group">
+            <label for="idade">Digite sua idade:</label>
+            <input type="number" class="form-control" name="idade" min="0" max="99" required ngModel #idadeInput (input)="validarInput(nomeInput,idadeInput,emailInput,troncoInput)">
+        </div>
+        <div class="form-group">
+            <label for="email">Digite seu e-mail:</label>
+            <input type="text" class="form-control" name="email" required ngModel #emailInput (input)="validarInput(nomeInput,idadeInput,emailInput,troncoInput)">
+        </div>
+        <div class="form-group">
+
+            <label for="classe">Selecione seu Curso:</label>
+            <select name="tronco" class="form-control" required ngModel #troncoInput (input)="validarInput(nomeInput,idadeInput,emailInput,troncoInput)">
+                <option *ngFor="let tronco of troncos" [value] = "tronco" >{{tronco}}</option>
+            </select>
+        </div>
+        <button [ngStyle]="{color: mudarCorTexto()}" [ngClass]="{'btn-primary':mudarCorBotao(),'btn-secondary': !mudarCorBotao()}" [disabled] = "!validInput" class="btn btn-block mt-3" type="submit">Salvar Aluno</button>
+    </form>
+
+    <div class="row">
+        <div class="col-4 mt-4" *ngFor="let aluno of colecaoAluno">
+            <div class="card mb-3 mt-0 border-primary">
+                <div class="card-header">
+                    {{aluno.nome}}
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Idade do Aluno: {{aluno.idade}}</p>
+                    <p class="card-text">E-mail do Aluno: {{aluno.email}}</p>
+                    <p class="card-text">Curso do Aluno: {{aluno.tronco}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

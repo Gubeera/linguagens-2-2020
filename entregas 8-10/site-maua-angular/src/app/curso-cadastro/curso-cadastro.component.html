@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row mt-3">
+      
+      <div class="col-md-6 form-group">
+        <label for="nomeInput">Nome do Curso</label>
+        <input type="text" class="form-control" id="nomeInput" #nomeInput (input)="validarInput(nomeInput.value, detalhesInput.value)"> 
+      </div>
+  
+      <div class="col-md-6 form-group">
+        <label for="detalhesInput">Detalhes do Curso</label>
+        <input type="text" class="form-control" id="detalhesInput" #detalhesInput (input)="validarInput(nomeInput.value, detalhesInput.value)">
+      </div>
+  
+    </div>
+    <div class="row">
+      <button [ngStyle]="{color: mudarCorTexto()}" [ngClass]="{'btn-primary':mudarCorBotao(),'btn-secondary': !mudarCorBotao()}" [disabled] = "!validInput" class="btn btn-block mt-3"(click)=adicionar(nomeInput.value,detalhesInput.value)>Cadastrar Curso</button>
+    </div>
+</div>
